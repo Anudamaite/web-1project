@@ -1,0 +1,224 @@
+.imgskill{
+    width: 40%;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+body{
+    background-color: rgb(240,240,240);
+}
+.brow{
+    border: none;
+    background-color: white;
+}
+.post{
+    background-color: rgb(242,0,145);
+    color: white;
+    width: 125px;
+    height: 35px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    margin-top: 15px;
+}
+.job{
+    color: white;
+    border: none;
+    background-color: #0E1724;
+    height: 40px;
+    width: 100px;
+}
+.job:hover{
+    background-color: #3c4149;
+}
+.free{
+    color: white;
+    border: none;
+    background-color: #0E1724;
+    height: 40px;
+    width: 120px;
+}
+.free:hover{
+    background-color: #3c4149;
+
+}
+.free1{
+    color: white;
+    border: none;
+    background-color: #0E1724;
+    border-bottom: 2px solid white;
+}
+.get{
+    color: white;
+    border: none;
+    background-color: #0E1724;
+    height: 40px;
+    width: 90px;
+}
+.get:hover{
+    background-color: #3c4149;
+
+}
+.res{
+    color: white;
+    border: none;
+    background-color: #0E1724;
+    height: 40px;
+    width: 100px; 
+}
+.res:hover{
+    background-color: #3c4149;
+}
+.new{
+    font-size: 20px;
+    font-weight: 700;
+}
+#alr{
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.5);
+    border: none;
+    background-color: rgb(234, 234, 234);
+    height: 40px;
+    width: 150px;
+}
+#your{
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    height: 40px;
+    width: 120px;
+    color: white;
+    background-color: dodgerblue;
+}
+#you{
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    height: 40px;
+    width: 150px;
+    color: white;
+    background-color: dodgerblue;
+}
+.back{
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    padding-top: 30px;
+}
+.dui{
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    margin-top: -8px;
+}
+.duise{
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+    margin-top: -8px;
+}
+.mem{
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+}
+#fund{
+    color: rgb(19, 159, 240);
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+}
+#col{
+    background-color: whitesmoke;
+    width: 90%;
+}
+#nav2{
+    display: none !important;
+}
+.it{
+    color: white;
+    background-color: rgb(242,0,145);
+    border: none;
+    width: 180px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+}
+#cer{
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+}
+.re{
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+}
+.sr{
+    font-size: 13px;
+    font-weight: 300;
+    color: white;
+}
+#twi{
+    margin-left: 10px;
+}
+#youtube{
+    margin-left: 10px;
+}
+#inst{
+    margin-left: 10px;
+}
+#us2{
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+}
+#us2:hover{
+    text-decoration: underline;
+}
+#usa{
+    color: rgb(197, 193, 193);
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+}
+#usa:hover{
+    color: white;
+    text-decoration: underline;
+}
+.skip{
+    color: rgb(19, 159, 240);
+    text-decoration: none;
+}
+.skip:hover{
+    color: rgb(19, 159, 240);
+    text-decoration: underline;
+}
+.submit{
+    border: none;
+    background-color: #F7F7F7;
+    color: #BEC0C2;
+    height: 30px;
+    width: 140px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+@media (max-width: 767px) {
+    #nav1{
+        display: none !important;
+    }
+    #nav2{
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: white;
+        height: 50px;
+        display: block !important;
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+    #nav3{
+        display: none !important;
+    }
+}

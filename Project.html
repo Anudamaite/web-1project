@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <title>Project</title>
+</head>
+<body>
+
+    <style>
+        /* *{
+            border: 1px solid red;
+        } */
+        body {
+            overflow-x: hidden;
+        } 
+  header {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    min-width: 100%;
+    overflow: hidden;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 900px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+} 
+
+.tab {
+        position: absolute;
+        top: -2.0%;
+        left: -1%;
+        background-color: rgba(0,0,0,0.3);
+        width: 101.5%;
+        height: 83.5%;
+        display: none;
+    }
+    .hov:hover .tab {
+        display: block;
+    } */
+
+.button {
+    margin-top: 90px;
+    width: 200px;
+    height: 50px;
+    font-size: 23px;
+    border: 3px solid white;
+    background-color: rgb(107,112,120);
+    color: white;
+}
+
+#cer{
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+}
+.re{
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+}
+.sr{
+    font-size: 13px;
+    font-weight: 300;
+    color: white;
+}
+
+@media (max-width: 767px) {
+  
+    /* #nav2{
+        padding-left: 55px;
+        padding-right: 25px;
+        background-color: white;
+        height: 50px;
+        display: block !important;
+        display: flex !important;
+        justify-content: space-between !important;
+    } */
+}
+
+/* Media Query for devices withi coarse pointers and no hover functionality */
+
+/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;   
+  }
+
+  header video {
+    display: none;
+  }
+}
+    </style>
+
+
+    <nav class="navbar navbar-expand-sm bg-white">
+        <div class="container-fluid">
+                <div class="nav justify-content-start">
+                        <a class="navbar-brand" href="https://www.freelancer.com/"><img src="freelancer-logo.svg" alt="logo" style="width: 120px;" class="ms-5"></a>
+                        <a class="nav-link text-dark" href="https://www.freelancer.com/info/how-it-works">How It Works</a>
+                        <a class="nav-link text-dark" href="https://www.freelancer.com/jobs/">Browse Jobs</a>
+
+                </div>
+        <form class="nav justify-content-start">
+                        <div><a class="nav-link text-dark" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/login.html">Log in</a></div>
+                        <div><a class="nav-link text-dark" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/signup.html">Sign Up</a></div>    
+                        <div><a class="nav-link text-dark" href="" style="color: white; padding: 10px; height: 45px; background-color: rgb(247, 16, 208);">Post a Project</a></div>
+        </form>
+        </div>
+    </nav>
+
+    <div style="background-color: rgb(14,23,36);">
+        <nav style="border-bottom: 1.4px solid rgb(14,23,36); height: 40px;">
+            <div class="text-white ms-5 pt-">
+                <div class="dropdown">
+                    <span style="margin-left: 15px;" type="button" class="btn btn-white text-white dropdown-toggle" data-bs-toggle="dropdown">Find Jobs</span>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">By Skills</a></li>
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">By Language</a></li>
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">Latest Jobs</a></li>
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">Featured Jobs</a></li>
+                        </ul>
+
+                    <span type="button" class="btn btn-white text-white dropdown-toggle" data-bs-toggle="dropdown">Find Freelancers</span>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">By Skill</a></li>
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">By Location</a></li>
+                        </ul>
+
+                    <span type="button" class="btn btn-white text-white dropdown-toggle" data-bs-toggle="dropdown">Get Ideas</span>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">Get Web Design Ideas</a></li>
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">Get Mobile App Ideas</a></li>
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">Get Graphic Design Ideas</a></li>
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">Get Logo Design Ideas</a></li>
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">Get 3D Modelling Ideas</a></li>
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">Get Illustrations Ideas</a></li>
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">Get Branding Ideas</a></li>
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">Get Product Design Ideas</a></li>
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">Get Package Design Ideas</a></li>
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">Get Wordpress Ideas</a></li>
+                        </ul>
+
+                        <span type="button" class="btn btn-white text-white dropdown-toggle" data-bs-toggle="dropdown">Resources</span>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">Business</a></li>
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">Data Entry</a></li>
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">Design &amp; Media</a></li>
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">Sales &amp; Marketing</a></li>
+                          <li><a class="dropdown-item" href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html#">IT &amp; Software</a></li>
+                        </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- <nav class="navbar navbar-expand-sm bg-white">
+    </nav> -->
+
+    <header>
+
+        <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+        <div class="overlay"></div>
+      
+        <!-- The HTML5 video element that will create the background video on the header -->
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+          <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+        </video>
+      
+        <!-- The header content -->
+        <div class="container h-100">
+          <div class="d-flex h-100 ">
+            <div class="w-100 text-white">
+              <h1 style="font-weight: bold;" class="display-3 mt-5 pt-3">Hire the best <br> freelancers for any job, <br> online.</h1>
+              <p class="lead mb-0">Millions of people use freelancer.com to turn their ideas <br> into reality.</p>
+              <a href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html"><button type="button" style="background-color: rgb(243,0,145); color: white; width: 220px; height: 60px; border: none; font-weight: bold; margin-top: 30px;"><h1 style="font-size: 21px; font-family: Helvetica, Arial, sans-serif; padding-top: 10px; font-weight: bold;">Hire a Freelancer</h1></button></a>
+              <a href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html"><button type="button" style="background-color: rgb(14, 23, 36); color: white; width: 260px; height: 60px; border: none; font-weight: bold; margin-top: 30px; margin-left: 17px;"><h1 style="font-size: 21px; font-family: Helvetica, Arial, sans-serif; padding-top: 10px; font-weight: bold;">Earn Money Freelancing</h1></button></a>
+            </div>
+          </div>
+        </div>
+      </header>
+    
+    <h5 style="margin-top: 40px; margin-left: 85px; font-weight: 400;">
+        As used by
+        <span style="display: flex; justify-content: space-evenly; margin-top: -35px; margin-left: 85px;">
+            <img src="project/amazon.svg" alt="">
+            <img style="height: 55px;" src="project/facebook.svg" alt="">
+            <img style="height: 55px;" src="project/del.svg" alt="">
+            <img style="height: 52px;" src="project/nas.svg" alt="">
+            <img style="height: 55px;" src="project/ibm.svg" alt="">
+            <img style="height: 55px;" src="project/air.svg" alt="">
+            <img src="project/tel.svg" alt="">
+            <img src="project/fuj.svg" alt="">
+            <img src="project/goo.svg" alt="">
+        </span>
+    </h5>
+
+    <div style="border: 0.5px solid rgb(222, 222, 222); width: 91%; margin-top: 30px; margin-left: 90px;"></div>
+
+        <div style="margin-top: 70px; margin-left: 80px;">
+            <span style="font-weight: 600; font-size: 46px; color: rgb(14,23,36);" class="mt-5 pt-5">Need something done?</span>
+        </div><br><br><br><br>
+
+        <div style="display: flex; justify-content: space-evenly;">
+            <div style="margin-left: 60px;">
+                <img style="height: 60px;" src="project/post.svg" alt=""><span style="font-size: 26px; font-weight: 600; margin-left: 13px; color: rgb(14, 23, 36);">Post a job</span><br><br>
+                <span style="font-weight: 400; font-size: 18px; color: rgb(14,23,36)">It's free and easy to post a job. Simply fill in a title, description and budget and competitive bids come within minutes.</span>
+            </div>
+
+            <div style="margin-left: 60px;">
+                <img style="height: 60px;" src="project/cho.svg" alt=""><span style="font-size: 26px; font-weight: 600; margin-left: 13px; color: rgb(14, 23, 36);">Choose freelancers</span><br><br>
+                <span style="font-weight: 400; font-size: 18px; color: rgb(14,23,36)">No job is too big or too small. We've got freelancers for jobs of any size or budget, across 1800+ skills. No job is too complex. We can get it done!</span>
+            </div>
+
+            <div style="margin-left: 60px;">
+                <img style="height: 60px;" src="project/pay.svg" alt=""><span style="font-size: 26px; font-weight: 600; margin-left: 13px; color: rgb(14, 23, 36);">Pay safely</span><br><br>
+                <span style="font-weight: 400; font-size: 18px; color: rgb(14,23,36)">Only pay for work when it has been completed and you're 100% satisfied with the quality using our milestone payment system.</span>
+            </div>
+
+            <div style="margin-left: 45px;">
+                <img style="height: 60px;" src="project/hel.svg" alt=""><span style="font-size: 26px; font-weight: 600; margin-left: 13px; color: rgb(14, 23, 36);">We're here to help</span><br><br>
+                <span style="font-weight: 400; font-size: 18px; color: rgb(14,23,36)">Our talented team of recruiters can help you find the best freelancer for the job and our technical co-pilots can even manage the project for you.</span>
+            </div>
+        </div><br><br>
+
+    <div style="border: 0.5px solid rgb(222, 222, 222); width: 91%; margin-top: 30px; margin-left: 90px;"></div>
+
+        <div style="margin-top: 70px; margin-left: 80px;">
+            <span style="font-weight: 600; font-size: 46px; color: rgb(14,23,36);" class="mt-5 pt-5">What's great about it?</span>
+        </div>
+
+        <div style="margin-top: 120px; display: flex; justify-content: space-evenly;">
+            <div style="margin-left: 60px;">
+                <img style="height: 66px;" src="project/bro.svg" alt=""><span style="font-size: 26px; margin-left: 13px; font-weight: 600; color: rgb(14,23,36);">Browse portfolios</span><br><br>
+               <span style="font-weight: 400; font-size: 18px; color: rgb(14,23,36)">Find professionals you can trust by browsing their samples of previous work and reading their profile reviews.</span>
+            </div>
+
+            <div style="margin-left: 40px;">
+                <img style="height: 66px;" src="project/fast.svg" alt=""><span style="font-size: 26px; margin-left: 13px; font-weight: 600; color: rgb(14,23,36);">Fast bids</span><br><br>
+               <span style="font-weight: 400; font-size: 18px; color: rgb(14,23,36)">Receive obligation free quotes from our talented freelancers fast. 80% of projects get bid on within 60 seconds.</span>
+            </div>
+
+            <div style="margin-left: 30px; margin-top: -2px;">
+                <img style="height: 66px;" src="project/wor.svg" alt=""><span style="font-size: 26px; margin-left: 13px; font-weight: 600; color: rgb(14,23,36);">Quality work</span><br><br>
+               <span style="font-weight: 400; font-size: 18px; color: rgb(14,23,36)">Freelancer.com has by far the largest pool of quality freelancers globally- over 50 million to choose from.</span>
+            </div>
+
+            <div style="margin-left: 20px; margin-top: -4px;">
+                <img style="height: 66px;" src="project/tra.svg" alt=""><span style="font-size: 26px; margin-left: 13px; font-weight: 600; color: rgb(14,23,36);">Track progress</span><br><br>
+               <span style="font-weight: 400; font-size: 18px; color: rgb(14,23,36)">Keep up-to-date and on-the-go with our time tracker, and mobile app. Always know what freelancers are up to.
+            </span>
+            </div>
+        </div><br><br>
+    
+
+        <div style="border: 0.5px solid rgb(222, 222, 222); width: 91%; margin-left: 90px; margin-top: 30px;"></div>
+        <div style="margin-top: 70px; margin-left: 80px;">
+            <span style="font-weight: 600; font-size: 46px; color: rgb(14,23,36);" class="mt-5 pt-5">Make it Real with Freelancer.</span>
+            <h3 style="font-weight: 400; margin-top: 20px; color: rgb(14,23,36);">Get some Inspirations from 1800+ skills</h3>
+        </div>
+    
+        <section class="mt-5 pt-5" style="width: 99%; margin-left: 28px;">
+            <main class="row">
+                <div class="col-sm hov" style="position: relative;">
+                    <div><img width="100%" src="project/log.webp" alt=""></div>
+                    <div class="fs-5 fw-bold">Logo Design.</div>
+                      <div class="fs-5 fw-bold"> $30 USD in 1 day.</div>
+                      <div class="tab text-center ">
+                       <button style="margin-top: 80px;" class="btn border-white text-white rounded-0 fs-5 p-3 ps-4 pe-4 om">
+                           Discover More
+                       </button>
+                      </div>
+                </div>
+                <div class="col-sm hov" style="position: relative;">
+                    <img width="100%" src="project/pac.webp" alt="">
+                    <div class="fs-5 fw-bold">Package Design..</div>
+                      <div class="fs-5 fw-bold">$280 USD in 4 days.</div>
+                      <div class="tab text-center ">
+                       <button style="margin-top: 80px;" class="btn border-white text-white rounded-0 fs-5 p-3 ps-4 pe-4 om">
+                           Discover More
+                       </button>
+                       </div>
+                </div>
+                <div class="col-sm hov" style="position: relative;">
+                    <img width="100%" src="project/mob.webp" alt="">
+                    <div class="fs-5 fw-bold">Mobile Design.</div>
+                      <div class="fs-5 fw-bold"> $600 USD in 4 days.</div>
+                      <div class="tab text-center ">
+                       <button style="margin-top: 80px;" class="btn border-white text-white rounded-0 fs-5 p-3 ps-4 pe-4 om">
+                           Discover More
+                       </button>
+                       </div>
+                </div>
+                <div class="col-sm hov" style="position: relative;">
+                    <img width="100%" src="project/wordp.webp" alt="">
+                    <div class="fs-5 fw-bold">WordPress.</div>
+                    <div class="fs-5 fw-bold">$45 USD in 1 day</div>
+                    <div class="tab text-center ">
+                       <button style="margin-top: 80px;" class="btn border-white text-white rounded-0 fs-5 p-3 ps-4 pe-4 om">
+                           Discover More
+                       </button>
+                    </div>
+                </div>
+            </main>
+            <main class="row pt-5" >
+                <div class="col-sm hov" style="position: relative;">
+                    <img width="100%" src="project/gla.webp" alt="">
+                    <div class="fs-5 fw-bold">Logo Design.</div>
+                      <div class="fs-5 fw-bold"> $30 USD in 1 day.</div>
+                      <div class="tab text-center ">
+                       <button style="margin-top: 80px;" class="btn border-white text-white rounded-0 fs-5 p-3 ps-4 pe-4 om">
+                           Discover More
+                       </button>
+                    </div>
+                </div>
+                <div class="col-sm hov" style="position: relative;">
+                    <img width="100%" src="project/web.webp" alt="">
+                    <div class="fs-5 fw-bold">Website.</div>
+                      <div class="fs-5 fw-bold">$150 USD in 1 day.</div>
+                      <div class="tab text-center ">
+                       <button style="margin-top: 80px;" class="btn border-white text-white rounded-0 fs-5 p-3 ps-4 pe-4 om">
+                           Discover More
+                       </button>
+                    </div>
+                </div>
+                <div class="col-sm hov" style="position: relative;">
+                    <img width="100%" src="project/webd.webp" alt="">
+                    <div class="fs-5 fw-bold">Website Design.</div>
+                      <div class="fs-5 fw-bold"> $140 USD in 13 days.</div>
+                       <div class="tab text-center ">
+                           <button style="margin-top: 80px;" class="btn border-white text-white rounded-0 fs-5 p-3 ps-4 pe-4 om">
+                               Discover More
+                           </button>
+                        </div>
+                </div>
+                <div class="col-sm hov" style="position: relative;">
+                    <img width="100%" src="project/ill.webp" alt="">
+                    <div class="fs-5 fw-bold">Illustration.</div>
+                      <div class="fs-5 fw-bold">$10 USD in 3 days.y</div>
+                      <div class="tab text-center ">
+                       <button style="margin-top: 80px;" class="btn border-white text-white rounded-0 fs-5 p-3 ps-4 pe-4 om">
+                           Discover More
+                       </button>
+                    </div>
+                </div>
+            </main>
+            <main class="row pt-5 " style="position: relative;">
+                <div class="col-sm hov " style="position: relative;">
+                    <img width="100%" src="project/pre.webp" alt="">
+                    <div class="fs-5 fw-bold">WordPress.</div>
+                      <div class="fs-5 fw-bold"> $150 USD in 18 day.</div>
+                      <div class="tab text-center ">
+                       <button style="margin-top: 80px;" class="btn border-white text-white rounded-0 fs-5 p-3 ps-4 pe-4 om">
+                           Discover More
+                       </button>
+                    </div>
+                </div>
+                <div class="col-sm hov" style="position: relative;">
+                    <img width="100%" src="project/pack.webp" alt="">
+                    <div class="fs-5 fw-bold">Package Design..</div>
+                      <div class="fs-5 fw-bold">$100 USD in 6 days.</div>
+                      <div class="tab text-center ">
+                       <button style="margin-top: 80px;" class="btn border-white text-white rounded-0 fs-5 p-3 ps-4 pe-4 om">
+                           Discover More
+                       </button>
+                    </div>
+                </div>
+                <div class="col-sm hov" style="position: relative;">
+                    <img width="100%" src="project/des.webp" alt="">
+                    <div class="fs-5 fw-bold">Mobile Design.</div>
+                      <div class="fs-5 fw-bold">$100 USD in 1 day.</div>
+                      <div class="tab text-center ">
+                       <button style="margin-top: 80px;" class="btn border-white text-white rounded-0 fs-5 p-3 ps-4 pe-4 om">
+                           Discover More
+                       </button>
+                    </div>
+                </div>
+                <div class="col-sm hov" style="position: relative;">
+                    <img width="100%" src="project/dpack.webp" alt="">
+                    <div class="fs-5 fw-bold">Package Design.</div>
+                      <div class="fs-5 fw-bold">$155 USD in 2 days.y</div>
+                      <div class="tab text-center ">
+                       <button style="margin-top: 80px;" class="btn border-white text-white rounded-0 fs-5 p-3 ps-4 pe-4 om">
+                           Discover More
+                       </button>
+                    </div>
+                </div>
+            </main>
+            <main class="row pt-5" style="position: relative;">
+                <div class="col-sm">
+                    <img width="100%" src="project/200.webp" alt="">
+                    <div class="fs-5 fw-bold">Website.
+                       </div>
+                      <div class="fs-5 fw-bold"> $200 USD in 9 days.</div>
+                      <div class="tab text-center ">
+                       <button style="margin-top: 80px;" class="btn border-white text-white rounded-0 fs-5 p-3 ps-4 pe-4 om">
+                           Discover More
+                       </button>
+                    </div>
+                </div>
+                <div class="col-sm hov" style="position: relative;">
+                    <img width="100%" src="project/3d.webp" alt="">
+                    <div class="fs-5 fw-bold">3D Modeling.</div>
+                      <div class="fs-5 fw-bold">$110 USD in 28 days.</div>
+                      <div class="tab text-center ">
+                       <button style="margin-top: 80px;" class="btn border-white text-white rounded-0 fs-5 p-3 ps-4 pe-4 om">
+                           Discover More
+                       </button>
+                    </div>
+                </div>
+                <div class="col-sm hov" style="position: relative;">
+                    <img width="100%" src="project/20.webp" alt="">
+                    <div class="fs-5 fw-bold">Logo Design.</div>
+                      <div class="fs-5 fw-bold"> $20 USD in 3 days.</div>
+                      <div class="tab text-center ">
+                       <button style="margin-top: 80px;" class="btn border-white text-white rounded-0 fs-5 p-3 ps-4 pe-4 om">
+                           Discover More
+                       </button>
+                    </div>
+                </div>
+                <div class="col-sm hov" style="position: relative;">
+                    <img width="100%" src="project/60.webp" alt="">
+                    <div class="fs-5 fw-bold">Graphic Design.</div>
+                      <div class="fs-5 fw-bold">$60 USD in 10 days.</div>
+                      <div class="tab text-center ">
+                       <button style="margin-top: 80px;" class="btn border-white text-white rounded-0 fs-5 p-3 ps-4 pe-4 om">
+                           Discover More
+                       </button>
+                    </div>
+                </div>
+            </main>
+        </section>
+    
+        <a href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html"><button type="button" style="background-color: rgb(243,0,145); color: white; width: 240px; height: 50px; border: none; font-weight: bold; margin-top: 110px; margin-left: 43%;"><h1 style="font-size: 21px; font-family: Helvetica, Arial, sans-serif; padding-top: 10px; font-weight: bold;">View More Projects</h1></button></a>
+
+        <div style="border: 0.5px solid rgb(222, 222, 222); width: 91%; margin-left: 90px; margin-top: 105px;"></div>
+
+        <div style="margin-top: 70px; margin-left: 80px;">
+            <span style="font-weight: 600; font-size: 46px; color: rgb(14,23,36);" class="mt-5 pt-5">Make it Real with Freelancer.</span>
+            <h3 style="font-weight: 400; margin-top: 20px; color: rgb(14,23,36);">Get some Inspirations from 1800+ skills</h3>
+        </div>
+        <main class="row mt-5 pt-5" style="margin-left: 23px;">
+            <div class="col-sm de">
+                <ul style="line-height: 60px; list-style: none;">
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/1st img.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Website Design</a>
+                    </li>
+                    <li class="cl">
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/8th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Mobile Apps</a>
+                    </li>
+                    <li class="cl">
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/15th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Android apps</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/22th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">iPhone Apps</a>
+                    </li>
+                    <li class="cl">
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/29th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-2">Software Architecture</a>
+                    </li>
+                    <li class="clo">
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/36th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Graphic Design</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/43th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Logo Design</a>
+                    </li>
+                    <li class="cl">
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="../sqi/g-7.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Public Relations</a>
+                    </li>
+                    <li class="cl" >
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/48th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Logistics</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/34th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none ps-3">Proofreading</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm hi">
+                <ul style="line-height: 60px; list-style: none;">
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/2nd img.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Translation</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/9th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Research</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/16th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Research Writing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/23th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Article Writing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/30th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Web Scraping</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/37th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">HTML</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/43th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">CSS</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/6th img.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">HTML 5</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/7th img.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">JavaScrip</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/13th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3 ">Data processing</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm hi">
+                <ul style="line-height: 60px; list-style: none;">
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/3rd.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Python</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/10th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Wordpress </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/20th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Web Search</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/24th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Finance</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/31th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Legal</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/38th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Linux </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/45th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Manufacturing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/7th img.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Amazon Web Services</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/14th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small  ps-3">Content Writing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/20th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Marketing</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm hi">
+                <ul style="line-height: 60px; list-style: none;">
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/4th img.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Excel</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/11th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Ghostwriting</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/18th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Copywriting</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/25th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Accounting</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/32th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">MySQL</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/39th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Banner Design</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/46th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Illustration</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/13th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-2">Software Development</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/21th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">PHP</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/27th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3 ">P3D Modelling </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm hi">
+                <ul style="line-height: 60px; list-style: none;">
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/5th img.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Photoshop</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/12th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Technical Writing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/19th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Blogging</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/26th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Internet Marketing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/33th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">eCommerce</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/40th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Data Entry</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/47th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">Link Building</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/21th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3">C++ Programming</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="17%" src="project/28th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3"># Programming</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-dark text-decoration-none"><img width="15%" src="project/49th.svg" alt=""></a>
+                        <a href="#" class="text-dark text-decoration-none small ps-3 ">See All</a>
+                    </li>
+                </ul>
+            </div>  
+        </main>
+
+    <div class="d-flex flex-row mt-5 pt-5">
+        <div>
+            <img style="height: 80%; width: 750px;" src="project/50th.webp" alt="">
+            <h4 style="font-weight: bold; font-size: 30px; margin-top: -400px; color: white; margin-left: 70px;">Freelancer API.</h4>
+            <div style="color: white; margin-left: 70px;">
+                <span style="font-weight: 700; font-size: 30px;" class="mt-5 pt-5">50 million professionals</span>
+                <div style="margin-top: -16px;">
+                    <span style="font-weight: 700; font-size: 30px;" class="mt-5 pt-5">on demand</span>
+                </div>
+                        <span style="font-weight: 400; font-size: 20px;">Why hire people when you can simply integrate our</span>
+                    <div>
+                        <span style="font-weight: 400; font-size: 20px;">talented cloud workforce instead?</span>
+                    </div>
+                        <a href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html"><button type="button" style="background-color: rgb(243,0,145); color: white; width: 180px; height: 40px; border: none; font-weight: bold; margin-top: 30px;">
+                            <h1 style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; padding-top: 10px; font-weight: bold;">View Documentation</h1>
+                        </button></a>
+            </div>
+        </div>
+
+        <div style="margin-left: -35px;">
+            <img style="height: 80%;" src="project/51th.webp" alt="">
+            <h4 style="font-weight: bold; font-size: 30px; margin-top: -400px; color: white; margin-left: 70px;">Freelancer Enterprise.</h4>
+            <div style="color: white; margin-left: 70px;">
+                <span style="font-weight: 700; font-size: 30px;" class="mt-5 pt-5">Company budget? Get</span>
+                <div style="margin-top: -16px;">
+                    <span style="font-weight: 700; font-size: 30px;" class="mt-5 pt-5">more done for less</span>
+                </div>
+                       <span style="font-weight: 400; font-size: 20px;">Use our workforce of 50 million to help</span>
+                <div>
+                    <span style="font-weight: 400; font-size: 20px;">your business achieve more.</span>
+                </div>
+                   <a href="file:///C:/Users/USER/Desktop/SQI/Project...Level1/Project.html"><button type="button" style="background-color: rgb(243,0,145); color: white; width: 120px; height: 40px; border: none; font-weight: bold; margin-top: 30px;">
+                   <h1 style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; padding-top: 10px; font-weight: bold;">Contact Us</h1>
+                    </button></a>
+            </div>
+        </div>
+        </div>
+    
+   <section style="background-color: #161E2C; margin-top: -190px;">
+    <main class="container mt-5">
+        <div class="row pt-4">
+            <div class="col-sm-2">
+                <img src="Capture1.PNG" alt="">
+                <div class="mt-3">
+                    <img src="webnet.PNG" alt="">
+                    <a href="#" id="us2">US (International)/ <br> English</a>
+                </div>
+                <div class="mt-2">
+                    <img src="ques mark.PNG" alt="">
+                    <a href="#" id="us2">Help & Support</a>
+                </div>
+            </div>
+            <div class="col-sm-2 pt-3">
+                <h2 id="cer">Freelancer</h2>
+                <div>
+                    <a href="#" id="usa">Categories</a> <br>
+                    <a href="#" id="usa">Projects</a> <br>
+                    <a href="#" id="usa">Contests</a> <br>
+                    <a href="#" id="usa">Freelancers</a> <br>
+                    <a href="#" id="usa">Enterprise</a> <br>
+                    <a href="#" id="usa">Preferred Freelancers Program</a> <br>
+                    <a href="#" id="usa">Project Management</a> <br>
+                    <a href="#" id="usa">Local Jobs</a> <br>
+                    <a href="#" id="usa">Photo Anywhere</a> <br>
+                    <a href="#" id="usa">Showcase</a> <br>
+                    <a href="#" id="usa">API for Developers</a> <br>
+                    <a href="#" id="usa">Get Verified</a>
+                </div>
+            </div>
+            <div class="col-sm-2 pt-3">
+                <h2 id="cer">About</h2>
+                <div>
+                    <a href="#" id="usa">About us</a> <br>
+                    <a href="#" id="usa">How it Works</a> <br>
+                    <a href="#" id="usa">Careers</a> <br>
+                    <a href="#" id="usa">Security</a> <br>
+                    <a href="#" id="usa">Investor</a> <br>
+                    <a href="#" id="usa">Sitemap</a> <br>
+                    <a href="#" id="usa">Stories</a> <br>
+                    <a href="#" id="usa">News</a>
+                </div>
+            </div>
+            <div class="col-sm-2 pt-3">
+                <h2 id="cer">Terms</h2>
+                <div>
+                    <a href="#" id="usa">Privacy Policy</a> <br>
+                    <a href="#" id="usa">Terms and Conditions</a> <br>
+                    <a href="#" id="usa">copyright Policy</a> <br>
+                    <a href="#" id="usa">Code of Conduct</a> <br>
+                    <a href="#" id="usa">Fees and Charges</a>
+                </div>
+            </div>
+            <div class="col-sm-2 pt-3">
+                <h2 id="cer">Partners</h2>
+                <div>
+                    <a href="#" id="usa">Escrow.com</a> <br>
+                    <a href="#" id="usa">Loadshift</a> <br>
+                    <a href="#" id="usa">Freightlancer</a> <br>
+                    <a href="#" id="usa">Warrior Forum</a>
+                </div>
+            </div>
+            <div class="col-sm-2 pt-3 ">
+                <h2 id="cer">Apps</h2>
+                <div>
+                    <img src="appst.PNG" alt=""> <br>
+                    <img src="goopl.PNG" alt="">
+                    <div class="mt-3">
+                        <img src="project/medias.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 pt-3">
+                <hr style="color: white;">
+            </div>
+            <div class="col-sm-3">
+                <h3 class="re">58,717,530</h3>
+                <p class="sr">Registered Users</p>
+            </div>
+            <div class="col-sm-3">
+                <h3 class="re">21,338,536</h3>
+                <p class="sr">Total Jobs Posted</p>
+            </div>
+            <div class="col-sm-6">
+                <p style="font-size: 11px; font-weight: 400; color: white;">
+                    Freelancer ® is a registered Trademark of Freelancer Technology Pty Limited (ACN 142 189 759)
+                    Copyright © 2022 Freelancer Technology Pty Limited (ACN 142 189 759)
+                </p>
+            </div>
+        </div>
+    </main>
+</section>
+</body>
+</html>
